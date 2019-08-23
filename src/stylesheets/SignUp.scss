@@ -1,0 +1,81 @@
+#SignUp {
+
+	.error {
+		text-align: left;
+	  color: rgb(215, 50, 40);
+	  font-size: 1.2em;
+	}
+
+	.error-container {
+		width: 500px;
+		padding: 20px;
+		margin: auto;
+
+		background-color: white;
+		border: 2px solid rgb(100,100,100);
+		border-radius: 12px;
+	}
+
+	.card {
+		display: grid;
+		grid-template: 100% / 5fr 3fr;
+
+		height: 500px;
+		width: 900px;
+		margin: 5vh auto;
+
+		background-color: white;
+		border: 2px solid rgb(100,100,100);
+		border-radius: 12px;
+	}
+
+	.form-container img {
+		display: block;
+		margin: 30px auto;
+		width: 60%;
+	}
+	.card .side-image {
+		border-radius: 0 10px 10px 0;
+		background-image: url(../images/signup2.jpeg);
+		background-size: cover;
+	}
+
+	.card form {
+		text-align: center;
+		margin: 20px 0 20px 0;
+	}
+
+	.card form p {
+		display: block;
+		text-align: left;
+		
+		margin: 5px auto 0 auto;
+
+		width: 432px;
+		font-size: 0.80em;
+	}
+
+	.card input {
+	  outline: none;
+	  font-size: 1.10em;
+		width: 200px;
+
+		margin: 0 10px;
+	  padding-left: .40em;
+
+	  border: 2px solid darkgrey;
+		border-radius: 4px;
+	}
+	.card input:focus {
+	  border: 2px solid dodgerblue;
+	}
+
+	.card button {
+		margin-top: 30px;
+	  width: 120px;
+	}
+
+	input#username {
+		width: 432px;
+	}
+}

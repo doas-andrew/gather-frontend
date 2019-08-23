@@ -1,0 +1,61 @@
+#MessageContainer {
+  height: 600px;
+	overflow-y: scroll;
+	position: relative;
+
+
+	.message {
+		position: relative;
+		overflow: hidden;
+
+		height: 140px;
+		margin: 30px;
+
+		background-color: lightgrey;
+		border-radius: 8px;
+		border: 2px solid lightgrey;
+
+		&:hover {
+			background-color: rgb(235,235,235);
+			border-color: dodgerblue;
+		}
+	}
+
+	svg.new {
+		position: absolute;
+		left: 0;
+		top: 0;
+		
+		font-size: 1.5em;
+		color: gold;
+	}
+
+	.text-container {
+		overflow: hidden;
+		padding: 15px 0 0 20px;
+		// background-color: green;
+		margin-right: 100px;
+	}
+
+	.avatar {
+		display: inline-block;
+		float: left;
+		height: 100%;
+	}
+
+	.date {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		margin: 0 5px 2px 0;
+
+		font-size: 0.80em;
+		color: grey;
+	}
+
+	.checkbox {
+		float: right;
+		margin: 10px 10px;
+		// transform: scale(1.60);
+	}
+}

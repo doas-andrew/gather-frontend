@@ -1,0 +1,51 @@
+#Home {
+
+	padding-bottom: 100px;
+
+	.home-slider {
+		height: 500px;
+		& div { background-size: cover; }
+	}
+
+	.welcome {
+		z-index: 5;
+		position: absolute;
+
+		top: 220px;
+		width: 70vw;
+
+		text-align: center;
+
+
+		p {
+			margin: 0;
+			padding: 15px 0;
+
+			color: white;
+			font-weight: bold;
+		  -webkit-text-stroke-color: black;
+			-webkit-text-stroke-width: 1px;
+		}
+
+		.text { background-color: rgba(white, 0.30); }
+		.heading { font-size: 3.00em; }
+		.subtext { font-size: 1.50em; }
+
+		button {
+			margin-top: 60px;
+			font-size: 1.1em;
+			width: 140px;
+		}
+	}
+
+	.events-heading {
+		text-align: center;
+		margin: 60px 0 30px 0;
+		font-size: 2em;
+	}
+	#EventsContainer {
+		margin: 0 50px;
+		border: 4px solid black;
+		border-radius: 8px;
+	}
+}

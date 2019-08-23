@@ -1,0 +1,53 @@
+#Login {
+
+	.error {
+		text-align: center;
+	  color: rgb(215, 50, 40);
+	  font-size: 1.2em;
+	}
+
+	.card {
+		position: relative;
+		height: 350px;
+		width: 400px;
+		margin: 5em auto;
+		padding: 10px;
+
+		background-color: white;
+		border: 2px solid black;
+		border-radius: 12px;
+	}
+	.card img {
+		display: block;
+		width: 80%;
+		margin: 20px auto 20px auto;
+	}
+
+	.card form {
+		position: absolute;
+		bottom: 30px;
+		left: 0;
+		right: 0;
+		text-align: center;
+	}
+
+	.card input {
+		outline: none;
+	  font-size: 1.10em;
+	  
+		margin: 15px 0;
+	  padding-left: .40em;
+
+	  border: 2px solid darkgrey;
+		border-radius: 4px;
+
+		&:focus { border-color: dodgerblue }
+	}
+
+	.card button {
+		margin-top: 20px;
+	  width: 120px;
+	  font-size: 0.90em;
+	}
+}
+

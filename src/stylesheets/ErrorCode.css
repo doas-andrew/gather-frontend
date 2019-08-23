@@ -1,0 +1,11 @@
+#error-code {
+	width: 500px;
+
+	margin: 50px auto;
+	padding: 20px;
+	text-align: center;
+
+	background-color: lightgrey;
+	border: 2px solid black;
+	border-radius: 16px;
+}

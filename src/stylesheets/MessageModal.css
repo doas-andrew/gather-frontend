@@ -1,0 +1,30 @@
+#MessageModal {
+	margin: auto;
+	width: 600px;
+	height: 450px;
+
+}
+
+#MessageModal .heading { margin: 0; }
+
+#MessageModal .close:hover { color: rgb(222,81,69); }
+#MessageModal .close {
+	float: right;
+	color: rgb(100,100,100);
+	transform: scale(1.40);
+}
+
+#MessageModal .content {
+	overflow-y: scroll;
+	height: 250px;
+	padding: 1px 20px;
+	/*border-radius: 8px;*/
+	background-color: rgb(230,230,230)
+}
+
+#MessageModal div.btn-blue {
+	cursor: default;
+	text-align: center;
+	width: 100px;
+	margin: 30px auto;
+}

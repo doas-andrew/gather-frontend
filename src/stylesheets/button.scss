@@ -1,0 +1,33 @@
+$fontSize: 0.95em;
+$fontWeight: 550;
+$border: 2px solid;
+$borderRadius: 8px;
+$baseColor: #fff;
+
+@mixin btn ($accentColor) {
+
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+
+  color: $baseColor;
+  background-color: $accentColor;
+  
+  border: $border $accentColor;
+  border-radius: $borderRadius;
+
+  &:hover {
+    color: $accentColor;
+    background-color: $baseColor;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba($accentColor, .30);
+  }
+}
+
+.btn-red   { @include btn(#DE5145); }
+.btn-green { @include btn(#28a745); }
+.btn-blue  { @include btn(#1E90FF); }
+.btn-grey  { @include btn(#646464); }
+.btn-vt    { @include btn(#ff9478); }

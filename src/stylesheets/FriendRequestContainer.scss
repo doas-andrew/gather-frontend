@@ -1,0 +1,41 @@
+#FriendRequestContainer {
+  height: 600px;
+	overflow-y: scroll;
+
+	.friend-request {
+		display: block;
+		overflow: hidden;
+		
+		height: 120px;
+		margin: 30px;
+
+		background-color: lightgrey;
+		border-radius: 8px;
+		border: 2px solid lightgrey;
+
+		&:hover {
+			background-color: rgb(235,235,235);
+			border-color: rgb(10, 166, 100);
+		}
+	}
+
+	h2 {
+		margin: 10px 0 40px 0;
+		text-align: center;
+	}
+
+	.btn-div {
+		text-align: center;
+
+		& button {
+			width: 120px;
+			margin: 0 20px;
+		}
+	}
+
+	.avatar {
+		display: inline-block;
+		float: left;
+		height: 100%;
+	}
+}

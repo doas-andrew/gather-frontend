@@ -1,0 +1,42 @@
+#ComposeMessage {
+	position: relative;
+  height: 600px;
+  width: 100%;
+
+  border-radius:  0 0 15px 15px;
+	background-color: rgb(100,100,100);
+}
+
+#ComposeMessage form {
+	padding-top: 70px;
+	text-align: center;
+}
+
+
+#ComposeMessage input, textarea {
+	outline: none;
+	font-size: 1.2em; 
+	border: 2px solid rgb(100,100,100);
+}
+
+#ComposeMessage input {
+	width: 314px;
+	padding: 0.30em 0.50em;
+}
+
+#ComposeMessage textarea:focus, input#subject:focus, input#recipient:focus { border-color: dodgerblue; }
+#ComposeMessage input#recipient { border-radius: 8px 0 0 0; }
+#ComposeMessage input#subject   { border-radius: 0 8px 0 0; }
+#ComposeMessage textarea {
+	resize: none;
+	width: 650px;
+	height: 350px;
+
+	padding: 0.50em;
+	border-radius: 0 0 8px 8px;
+}
+
+#ComposeMessage button {
+	width: 140px;
+	font-size: 1.20em;
+}

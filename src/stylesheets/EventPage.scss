@@ -1,0 +1,83 @@
+#EventPage {
+	padding-bottom: 100px;
+	border-left: 2px solid grey;
+	border-right: 2px solid grey;
+
+	img {
+		display: block;
+		width: 100%;
+		border-bottom: 2px solid grey;
+	}
+
+	.flex {
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	p {
+		margin: 0 auto;
+	}
+
+	.DateDiv {
+		margin: 20px 0 0 20px;
+		border: 2px solid black;
+		border-radius: 8px;
+	}
+
+	.text-container {
+		margin: 0 auto;
+		width: 55vw;
+
+		h1 {
+			display: inline-block;
+			margin: 20px;
+		}
+
+		p {
+			padding: 15px;
+			background-color: rgb(220,220,220);
+			border-radius: 8px;
+
+			button {
+				transform: scale(0.90)
+			}
+		}
+	}
+
+	h2 {
+		margin: 30px;
+
+		span { 
+			font-size: 1.2em;
+			color: dodgerBlue;
+		}
+	}
+
+	.user-container {
+		display: grid;
+		grid-template-columns: repeat(999, 300px);
+		overflow-x: scroll;
+
+		margin: 0 40px;
+		padding: 20px 50px;
+
+		background-color: grey;
+		border: 2px solid black;
+		border-radius: 8px;
+	}
+}
+
+#MapModal {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	margin: auto;
+	width: 820px;
+	height: 570px;
+}
+#MapModal button {
+	margin-top: 18px;
+	width: 100px;
+}

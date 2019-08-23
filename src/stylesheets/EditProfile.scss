@@ -1,0 +1,78 @@
+#EditProfile {
+
+	.edit-profile-card {
+		// height: 400px;
+		width: 600px;
+		margin: 10vh auto;
+
+		background-color: white;
+		border: 2px solid rgb(100,100,100);
+		border-radius: 12px;
+	}
+
+	svg {
+		display: inline-block;
+		margin: 15px 0 0 18px;
+
+		transform: scale(1.50);
+		color: rgb(200,200,200);
+
+		&:hover { color: rgb(215, 50, 40); }
+	}
+
+	h2 {
+		display: block;
+		text-align: center;
+		margin: 20px 0 0 0;
+		font-family: raleway;
+	}
+
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		margin-bottom: 65px;
+	}
+
+	.error-container {
+		width: 500px;
+		padding: 10px 20px;
+		margin: 0 auto 30px auto;
+
+		background-color: white;
+		border: 2px solid rgb(100,100,100);
+		border-radius: 12px;
+	}
+	.error {
+		text-align: left;
+	  color: rgb(215, 50, 40);
+	  font-size: 1.2em;
+	}
+
+	form {
+		text-align: center;
+		margin: 50px 0;
+		// border: 2px solid black;
+	}
+
+	input {
+	  outline: none;
+	  font-size: 1.10em;
+		width: 200px;
+
+		margin: 0 10px;
+	  padding-left: .40em;
+
+	  border: 2px solid darkgrey;
+		border-radius: 4px;
+
+		&:focus { border: 2px solid dodgerblue; }
+	}
+
+	label {
+		padding: 2px 18px;
+	}
+
+	button {
+	  width: 120px;
+	}
+}

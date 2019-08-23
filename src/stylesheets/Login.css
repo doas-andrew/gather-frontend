@@ -1,0 +1,53 @@
+#login .error {
+	margin-top: 10px;
+	text-align: center;
+  color: rgb(215, 50, 40);
+  font-size: 1.2em;
+}
+
+.login-card {
+	position: relative;
+	height: 350px;
+	width: 400px;
+	margin: 5em auto;
+	padding: 10px;
+
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 12px;
+}
+.login-card img {
+	display: block;
+	width: 80%;
+	margin: 20px auto 30px auto;
+	/*border: 2px solid black;*/
+}
+
+.login-card form {
+	position: absolute;
+	bottom: 30px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	/*background-color: red;*/
+}
+
+.login-card input {
+	outline: none;
+  font-size: 1.10em;
+  
+	margin: 0.50em 0;
+  padding-left: .40em;
+
+  border: 2px solid darkgrey;
+	border-radius: 4px;
+}
+.login-card input:focus {
+  border: 2px solid dodgerblue;
+}
+
+.login-card form button {
+	margin-top: 20px;
+  width: 120px;
+  font-size: 0.90em;
+}

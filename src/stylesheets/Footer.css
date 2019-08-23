@@ -1,0 +1,25 @@
+#Footer {
+	z-index: 10;
+
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	height: 20px;
+	margin: 0;
+	padding: 2px 15px;
+
+	font-family: 'Raleway', sans-serif;
+	background-color: rgba(100,100,100, 100);
+	border-top: 1px solid black;
+	color: white;
+}
+
+#Footer * {
+	display: inline-block;
+}
+
+#Footer .right {
+	float: right;
+}

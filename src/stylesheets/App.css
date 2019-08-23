@@ -1,0 +1,27 @@
+body {
+	background-color: lightgrey;
+}
+
+a {
+	text-decoration: none;
+	/*color: black;*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Raleway';
+}
+
+svg {
+  display: inline-flex;
+  align-self: center;
+
+  top: 0.12em;
+  position: relative;
+}
+
+.page {
+	z-index: -1;
+	width: 70vw;
+	margin: auto;
+	background-color: white;
+}

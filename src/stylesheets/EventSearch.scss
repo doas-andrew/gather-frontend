@@ -1,0 +1,96 @@
+#EventSearch {
+
+	background-color: white;
+	
+	.search {
+		padding: 40px 0 40px 0;
+
+		color: white;
+		font-family: 'Raleway';
+		background-color: rgb(10, 100, 166);
+
+		h1 {
+			margin: 0;
+			font-size: 3em;
+			text-align: center;
+		}
+		.sub-heading {
+			font-size: 1.8em;
+			text-align: center;
+		}
+
+		.grid {
+			display: grid;
+			grid-template-columns: 300px 0.70fr;
+		}
+
+		.filter-sort {
+			display: inline-block;
+
+			margin-left: 40px;
+			padding: 20px;
+
+			border: 4px solid #ff9478;
+			border-radius: 12px;
+		}
+
+		select {
+			width: 200px;
+			font-size: 1em;
+		  outline: none;
+
+		  margin-bottom: 20px;
+	  	padding-left: .40em;
+
+		  border: 3px solid darkgrey;
+			border-radius: 4px;
+
+			&:focus { border-color: #ff9478 }
+		}
+
+		.searchbar {
+			margin: auto;
+		}
+
+		.searchbar input {
+			height: 40px;
+			border: none;
+			outline: none;
+			font-size: 1.5em;
+	  	padding-left: .40em;
+
+			border: 2px solid white;
+			border-right: none;
+			border-radius: 8px 0 0 8px;
+
+			&:focus { border-color: #ff9478; }
+		}
+
+		.searchbar button {
+			outline: none;
+			border: none;
+			color: white;
+			background-color: #ff9478;
+			height: 46px;
+			font-size: 1.5em;
+			border: 2px solid #ff9478;
+			border-radius: 0 8px 8px 0;
+
+			&:hover {
+				color: #ff9478;
+				background-color: white;
+			}
+		}
+	}
+
+
+
+
+	.events-container {
+		display: grid;
+		grid-template-columns: repeat(4, 25%);
+		padding-bottom: 50px;
+
+		.EventCard { margin: 50px auto 0 auto; }
+	}
+}
