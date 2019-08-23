@@ -7,6 +7,7 @@ import DateDiv from '../components/DateDiv'
 import Modal from 'react-modal'
 import GoogleMap from '../components/GoogleMap'
 import UserCard from '../components/UserCard'
+import { rails_api } from '../constants'
 import '../stylesheets/EventPage.scss'
 
 
@@ -19,10 +20,9 @@ class EventPage extends React.Component {
 	}
 
 	componentDidMount() {
-		fetch('http://localhost:3000/events/'+this.props.id)
+		fetch(rails_api+'/events/'+this.props.id)
 		.then(res => res.json())
 		.then(res => {
-			console.log(res)
 			if (res.id)
 				this.setState({ event: res })
 			else
@@ -34,7 +34,7 @@ class EventPage extends React.Component {
 		if (!localStorage.token)
 			this.setState({ redirect: <Redirect to='/login' /> })
 		else {
-			fetch('http://localhost:3000/attends', {
+			fetch(rails_api+'/attends', {
 				method: 'POST',
 				headers: {
 					Authorization: localStorage.token,
@@ -45,7 +45,6 @@ class EventPage extends React.Component {
 			})
 			.then(res => res.json())
 			.then(res => {
-				console.log(res)
 				if (res.event)
 					this.setState({ event: res.event })
 			})
@@ -67,7 +66,6 @@ class EventPage extends React.Component {
 		let { event } = this.state
 		let date = new Date(event.date)
 
-		console.log(event.users)
 		return (
 			<div id='EventPage' className='page'>
 				{ this.showMapModal() }

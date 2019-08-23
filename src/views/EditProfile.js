@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import { Link, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { FaChevronCircleLeft } from 'react-icons/fa'
+import { rails_api } from '../constants'
 import '../stylesheets/EditProfile.scss'
 
 
@@ -28,9 +29,7 @@ class EditProfile extends React.Component {
 			update.confirm = form.confirm.value
 		}
 
-		console.log('update = ', update)
-
-		fetch(`http://localhost:3000/users/${this.props.user_id}`, {
+		fetch(`${rails_api}/users/${this.props.user_id}`, {
 			method: 'PATCH',
 			headers: {
 				Authorization: localStorage.token,
@@ -41,7 +40,6 @@ class EditProfile extends React.Component {
 		})
 		.then(res => res.json())
 		.then(res => {
-			console.log(res)
 			if(res.errors) {
 				form.current_password.value = null
 				this.props.dispatch({ type: 'ERRORS', errType: 'updateUser', errors: res.errors })

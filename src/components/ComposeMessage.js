@@ -6,7 +6,7 @@ import { createMessage } from '../actions/message_actions'
 import '../stylesheets/ComposeMessage.css'
 
 
-const textAreaPlaceholders = ['Say something nice!', 'Make it a good one!']
+const textAreaPlaceholders = ['Type your message', 'Say something nice!', 'Make it a good one!']
 
 
 class ComposeMessage extends React.Component {
@@ -55,7 +55,7 @@ class ComposeMessage extends React.Component {
 					</div>
 					<textarea
 						name='content'
-						placeholder={textAreaPlaceholders[Math.floor(Math.random()*textAreaPlaceholders.length)]}
+						placeholder={ [Math.floor(Math.random()*textAreaPlaceholders.length)] }
 						defaultValue = { this.checkErrors('Content') ? "Message can't exceed 999 characters." : null }
 						style={ this.checkErrors('Content') ? {borderColor: 'rgb(222,81,69)'} : null }
 					/>

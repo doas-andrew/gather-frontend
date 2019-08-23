@@ -5,6 +5,7 @@ import EventCard from '../components/EventCard'
 import ConfirmModal from '../components/ConfirmModal'
 import { postFriendRequest, getImgSrc, destroyFriendship } from '../actions/user_actions'
 import { FaCogs, FaUserPlus, FaUserMinus, FaUserCog, FaEnvelope } from 'react-icons/fa';
+import { rails_api } from '../constants'
 import '../stylesheets/Profile.scss'
 
 
@@ -22,7 +23,7 @@ class Profile extends Component {
 			this.setState({ user: this.props.user })
 
 		else {
-			fetch('http://localhost:3000/users/'+this.props.profile_id, {
+			fetch(rails_api+'/users/'+this.props.profile_id, {
 				headers: { Authorization: localStorage.token }
 			})
 			.then(res => res.json())

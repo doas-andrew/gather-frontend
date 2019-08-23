@@ -1,4 +1,4 @@
-const rails_api = 'http://localhost:3000'
+import { rails_api } from '../constants'
 
 //__________________________________________________
 
@@ -44,7 +44,6 @@ export function handleLogin(event) {
 	  })
 	  .then(res => res.json())
 	  .then(res => {
-	  	// console.log(res)
 	  	if (res.token) {
 	  		dispatch({ type: 'SET_USER', user: res.user })
 	  		dispatch({ type: 'LOG_IN', token: res.token })

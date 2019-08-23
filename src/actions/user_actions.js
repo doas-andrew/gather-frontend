@@ -1,5 +1,5 @@
 import { avatars } from '../images/avatar_samples/seed_data_avatars.js'
-const rails_api = 'http://localhost:3000'
+import { rails_api } from '../constants'
 
 //__________________________________________________
 

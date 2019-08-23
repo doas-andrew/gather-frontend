@@ -3,8 +3,9 @@ import { connect } from 'react-redux'
 import { categories } from '../images/events/event_categories_and_images.js'
 import united_states from '../united_states.js'
 import EventCard from '../components/EventCard'
-import debounce from 'lodash/debounce';
+// import debounce from 'lodash/debounce'
 import { IoMdSearch } from 'react-icons/io'
+import { rails_api } from '../constants'
 import '../stylesheets/EventSearch.scss'
 
 
@@ -25,7 +26,7 @@ class EventSearch extends React.Component {
 	}
 
 	componentDidMount() {
-		fetch('http://localhost:3000/events')
+		fetch(rails_api+'/events')
 		.then(res => res.json())
 		.then(res => this.setState({ events: res }))
 	}
@@ -43,10 +44,8 @@ class EventSearch extends React.Component {
 				eventArr = eventArr.sort( (a,b) => compare(a,b, 'title') )
 			}
 			case 'date': {
-				console.log(eventArr)
 				eventArr = eventArr.sort( (a,b) => compare(a,b, 'date') )
 				// eventArr = eventArr.sort( (a,b) => compareDates(a,b) )
-				console.log(eventArr)
 			}
 			case 'pop': {
 				eventArr = eventArr.sort( (a,b) => compare(a,b, 'num_attendees') )
@@ -66,7 +65,6 @@ class EventSearch extends React.Component {
 		if (!this.state.events)
 			return null
 
-		console.log(this.state)
 		return (
 			<div id='EventSearch'>
 				<div className='search'>

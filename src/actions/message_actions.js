@@ -1,4 +1,4 @@
-const rails_api = 'http://localhost:3000'
+import { rails_api } from '../constants'
 
 //__________________________________________________
 
@@ -33,7 +33,6 @@ export function createMessage (event) {
 
 export function updateSeenMessage (message_id) {
 	return dispatch => {
-		// console.log('updateSeenMessage INVOKED')
 		
 		fetch(`${rails_api}/messages/${message_id}/seen`,{
 			method: 'PATCH',
@@ -41,8 +40,6 @@ export function updateSeenMessage (message_id) {
 		})
 		.then(res => res.json())
 		.then(res => {
-			console.log(res)
-
 			if (res.message)
 				dispatch({ type: 'MESSAGE_SEEN', message_id })
 
@@ -63,7 +60,6 @@ export function deleteMessages (messages) {
 			})
 			.then(res => res.json())
 			.then(res => {
-				console.log(res)
 				if (res.user)
 					dispatch({ type: 'SET_USER', user: res.user })
 

@@ -1,13 +1,14 @@
 import React from 'react'
 import EventCard from '../components/EventCard'
 import '../stylesheets/EventsContainer.scss'
+import { rails_api } from '../constants'
 
 export default class EventsContainer extends React.Component {
 
 	state = { events: null }
 
 	componentDidMount() {
-		fetch('http://localhost:3000/events')
+		fetch(rails_api+'/events')
 		.then(res => res.json())
 		.then(res => this.setState({ events: res }))
 	}
@@ -16,7 +17,6 @@ export default class EventsContainer extends React.Component {
 		if (!this.state.events)
 			return null
 
-		console.log(this.state)
 		return (
 			<div id='EventsContainer'>
 				{

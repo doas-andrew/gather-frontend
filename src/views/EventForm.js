@@ -5,6 +5,7 @@ import Calendar from 'react-calendar'
 
 import { categories } from '../images/events/event_categories_and_images.js'
 import united_states from '../united_states.js'
+import { rails_api } from '../constants'
 
 import '../stylesheets/EventForm.scss'
 
@@ -30,7 +31,7 @@ class EventForm extends React.Component {
 			state: form.state.value,
 			date: this.state.date
 		}
-		fetch('http://localhost:3000/events',{
+		fetch(rails_api+'/events',{
 			method: 'POST',
 			headers: {
 				Authorization: localStorage.token,
@@ -41,7 +42,6 @@ class EventForm extends React.Component {
 		})
 		.then(res => res.json())
 		.then(res => {
-			console.log(res)
 			if (res.errors)
 				this.props.dispatch({ type: 'ERRORS', errType: 'events', errors: res.errors })
 
