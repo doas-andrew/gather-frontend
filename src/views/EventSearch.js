@@ -42,13 +42,15 @@ class EventSearch extends React.Component {
 		switch (this.state.sort) {
 			case 'abc': {
 				eventArr = eventArr.sort( (a,b) => compare(a,b, 'title') )
+				break
 			}
 			case 'date': {
 				eventArr = eventArr.sort( (a,b) => compare(a,b, 'date') )
-				// eventArr = eventArr.sort( (a,b) => compareDates(a,b) )
+				break
 			}
 			case 'pop': {
-				eventArr = eventArr.sort( (a,b) => compare(a,b, 'num_attendees') )
+				eventArr = eventArr.sort( (a,b) => compare(a,b, 'num_attendees') ).reverse()
+				break
 			}
 
 			default: eventArr = eventArr
